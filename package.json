@@ -1,0 +1,22 @@
+{
+  "name": "suanfa",
+  "version": "1.0.0",
+  "description": "算法导论",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelwgh/Algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelwgh/Algorithms/issues"
+  },
+  "homepage": "https://github.com/angelwgh/Algorithms#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "suanfa",
+  "description": "算法导论",
+  "main": "index.js",
+  "authors": [
+    "angelwgh <angel_wgh@163.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/angelwgh/Algorithms",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
