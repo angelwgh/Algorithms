@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>算法导论</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/index.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+<body ng-app="algorithms">
+	<div class="page-header">
+		<h1 class="tac">算法导论<small>Introduction to Algorithms</small></h1>
+	</div>
+	<div class="g-content">
+		<div class="m-directory fl-l">
+			<div ng-controller="directoryCtr">
+				<ul>
+					<li ng-repeat="part in directory">
+						<h4><i class="glyphicon glyphicon-triangle-bottom"></i> {{part.title}}</h3>
+						<ul>
+							<li ng-repeat="chapter in part.chapters">
+								<h5><i class="glyphicon glyphicon-triangle-bottom"></i> {{chapter.title}}</h5>
+								<ul>
+									<li ng-repeat="section in chapter.sections">
+										<a ng-href="#!/{{section.path}}">
+											<i class="list-style">·</i> {{section.title}}
+										</a>
+										
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="m-content ">
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>
