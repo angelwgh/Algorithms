@@ -4,11 +4,17 @@
 	<meta charset="UTF-8">
 	<title>算法导论</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style/index.css">
+	
+	
+	<script src="bower_components/marked/lib/marked.js"></script>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="js/index.js"></script>
 	<script src="js/controllers.js"></script>
 </head>
@@ -43,5 +49,7 @@
 			<div ng-view></div>
 		</div>
 	</div>
+	
+	
 </body>
 </html>

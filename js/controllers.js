@@ -114,6 +114,73 @@ algorithmsControllers.controller('directoryCtr', ['$scope', function($scope){
 
 
 //内容页控制器
-algorithmsControllers.controller('contentCtrl',['$scope', '$routeParams',function ($scope,$routeParams) {
+algorithmsControllers.controller('homePageContentCtrl',['$scope', '$routeParams',function ($scope,$routeParams) {
 	$scope.section=$routeParams.sectionNum;
+	console.log($scope.section)
+	var rendererMD = new marked.Renderer();
+
+	rendererMD.table = function (header, body) {
+	    return '<table class="table table-striped">'+header+body+'</table>'
+	}
+
+	marked.setOptions({
+		renderer:rendererMD,
+		gfm: true,
+	    tables: true,
+	    breaks: false,
+	    pedantic: false,
+	    sanitize: false,
+	    smartLists: true,
+	    smartypants: false
+	});//基本设置
+
+	marked.setOptions({
+        highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+
+
+    $.get('./README.md',function (result) {
+    	$('#content').html(marked(result));
+    	$('pre code').addClass('hljs mel');
+    })
+}])
+
+algorithmsControllers.controller('contentCtrl', ['$scope','$routeParams', function($scope,$routeParams){
+	$scope.section=$routeParams.sectionNum; //获取路径
+
+	console.log($scope)
+
+	var rendererMD = new marked.Renderer();
+
+	rendererMD.table = function (header, body) {
+	    return '<table class="table table-striped">'+header+body+'</table>'
+	}
+
+	marked.setOptions({
+		renderer:rendererMD,
+		gfm: true,
+	    tables: true,
+	    breaks: false,
+	    pedantic: false,
+	    sanitize: false,
+	    smartLists: true,
+	    smartypants: false
+	});//基本设置
+
+	marked.setOptions({
+        highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+
+
+    $.get('./content/pages/'+$scope.section+'.md',function (result) {
+    	$('#secssion-pages').html(marked(result));
+    	$('pre code').addClass('hljs mel');
+    })
+
 }])
