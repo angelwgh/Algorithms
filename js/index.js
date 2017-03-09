@@ -11,11 +11,11 @@ var algorithms = angular.module('algorithms',[
 algorithms.config(['$routeProvider',
 	function ($routeProvider) {
 		$routeProvider.when('/',{
-			templateUrl:'content/content.html',
-			controller:'contentCtrl'
+			templateUrl:'content/homepage.html',
+			controller:'homePageContentCtrl'
 		})
 		.when('/:sectionNum',{
-			templateUrl:'content/content1.html',
+			templateUrl:'content/secssion.html',
 			controller:'contentCtrl'
 		})
 		.otherwise({
