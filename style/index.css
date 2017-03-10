@@ -14,7 +14,8 @@ label,summary{cursor:default;}
 a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 */
-li{list-style:none;line-height: 1.5}
+li{line-height: 1.5}
+p{text-indent: 2em;line-height: 1.5}
 a,a:hover{color:#333;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 "Microsoft YaHei",arial,\5b8b\4f53;color:#333;outline:0;}
@@ -33,9 +34,9 @@ body{background:#fff;}
 .m-directory{width: 400px;padding-left: 80px;}
 
 .m-directory ul{padding-left: 20px;}
-.m-directory ul li{ line-height: 1.5 }
+.m-directory ul li{ line-height: 1.5; list-style: none}
 .m-directory h4,.m-directory h5{line-height: 2;}
 .m-directory a:focus{text-decoration:none;}
 
 
-.m-content{margin-left: 400px;padding-right: 50px}
+.m-content{margin-left: 400px;padding-right: 50px;min-width: 800px;}

@@ -13,7 +13,7 @@ algorithmsControllers.controller('directoryCtr', ['$scope', function($scope){
 						title:"第一部分：基础知识",
 						chapters:{
 							chapter1: {
-								title: "第2章 算法在计算中的作用",
+								title: "第1章 算法在计算中的作用",
 								sections:{
 									section1:{
 										title:"1.1 算法",
