@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/angelwgh/Algorithms#readme",
   "devDependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "highlight": "^0.2.4"
   }
 }
