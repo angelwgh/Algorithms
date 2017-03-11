@@ -181,6 +181,9 @@ algorithmsControllers.controller('contentCtrl', ['$scope','$routeParams', functi
     $.get('./content/pages/'+$scope.section+'.md',function (result) {
     	$('#secssion-pages').html(marked(result));
     	$('pre code').addClass('hljs mel');
+
+    	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
     })
 
 }])

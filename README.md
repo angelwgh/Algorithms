@@ -149,3 +149,19 @@ h1>
         console.log(marked.parser(tokens));
         console.log(lexer.rules);//打出正则信息
 ```
+
+
+## 导入MathJax.js
+
+引入：
+```html
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+```
+
+手动渲染:
+```js
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}//配置$作为行内公式的标记
+});
+MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+```
