@@ -151,7 +151,7 @@ algorithmsControllers.controller('homePageContentCtrl',['$scope', '$routeParams'
 algorithmsControllers.controller('contentCtrl', ['$scope','$routeParams', function($scope,$routeParams){
 	$scope.section=$routeParams.sectionNum; //获取路径
 
-	console.log($scope)
+	//console.log($scope)
 
 	var rendererMD = new marked.Renderer();
 

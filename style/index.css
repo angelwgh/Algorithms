@@ -40,3 +40,5 @@ body{background:#fff;}
 
 
 .m-content{margin-left: 400px;padding-right: 50px;min-width: 800px;}
+
+.m-content blockquote {color: #999;border-left: 10px solid #999;}
